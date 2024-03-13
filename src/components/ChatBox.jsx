@@ -30,7 +30,6 @@ function ChatBox() {
     });
     return () => unsubscribe;
   }, []);
-  console.log(messages);
   return (
     <main>
       {messages.length == 0 ? (

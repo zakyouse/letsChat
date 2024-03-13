@@ -15,7 +15,7 @@ function SendMessage({ scroll }) {
       text: message,
       name: displayName,
       avatar: photoURL,
-      CreatedAt: serverTimestamp(),
+      createdAt: serverTimestamp(),
       uid,
     });
     setMessage("");

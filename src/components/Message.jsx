@@ -3,7 +3,6 @@ import { auth } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 function Message(message) {
   const [user] = useAuthState(auth);
-  console.log(message);
   return (
     <div
       className={`chat-bubble ${
@@ -23,9 +22,6 @@ function Message(message) {
       <div className="chat-bubble__right">
         <p className="user-message">{message.message.text}</p>
       </div>
-      {/* <div className="time">
-        <p className="time--text">{message.message.text}</p>
-      </div> */}
     </div>
   );
 }

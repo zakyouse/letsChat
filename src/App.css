@@ -148,6 +148,7 @@ main {
   background-color: #808080;
   width: max-content;
   min-width: 100px;
+  max-width: 90% !important;
   margin: 5px 15px;
   padding: 3px 8px;
   border-radius: 5px;
@@ -172,11 +173,6 @@ main {
   font-size: 0.8rem;
   font-family: "Lato", sans-serif;
 }
-.time--text {
-  margin: 0;
-  font-size: 0.6rem;
-  color: #474747;
-}
 .chat-bubble-title {
   display: flex;
   justify-content: left;
@@ -189,6 +185,7 @@ main {
 }
 /* chat component */
 .messages-wrapper {
+  /* overflow-x: hidden; */
   padding: 30px;
   margin-bottom: 60px;
   height: max-content;
@@ -211,13 +208,13 @@ main {
 }
 .user-message {
   word-break: break-all;
-}
-.message-time {
-  display: block;
-  text-align: right;
+  word-wrap: wrap;
 }
 .welcome--message {
   text-align: center;
+}
+.loader {
+  position: absolute;
 }
 @media only screen and (max-width: 540px) {
   .platform--title {
@@ -225,7 +222,8 @@ main {
   }
 }
 @media only screen and (min-height: 690px) {
-  main {
+  main,
+  .messages-wrapper {
     min-height: 90%;
   }
 }
