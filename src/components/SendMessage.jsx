@@ -3,7 +3,7 @@ import { auth, db } from "../firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 
 function SendMessage({ scroll }) {
-  const [message, setMessage] = React.useState("");
+  const [message, setMessage] = useState("");
   const sendMessage = async (event) => {
     event.preventDefault();
     if (message.trim() === "") {
@@ -15,7 +15,7 @@ function SendMessage({ scroll }) {
       text: message,
       name: displayName,
       avatar: photoURL,
-      createdAt: serverTimestamp(),
+      CreatedAt: serverTimestamp(),
       uid,
     });
     setMessage("");

@@ -11,7 +11,9 @@ function Welcome() {
       <div className="welcome--page">
         <h1 className="title">Welcome to KSC chat</h1>
         <img src={logo} alt="logo" className="welcome--logo" />
-        <h3>Sign in to Interact with your fellow comrades</h3>
+        <h3 className="welcome--message">
+          Sign in to Interact with your fellow comrades
+        </h3>
         <button className="google--signin" onClick={googleSignIn}>
           <i className="fa-brands fa-google"></i>
           Sign In With Google

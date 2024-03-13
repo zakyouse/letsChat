@@ -148,7 +148,7 @@ main {
   background-color: #808080;
   width: max-content;
   min-width: 100px;
-  margin: 0 15px;
+  margin: 5px 15px;
   padding: 3px 8px;
   border-radius: 5px;
   box-shadow: 0 0 10px 1px #1d1d1d41;
@@ -215,6 +215,9 @@ main {
 .message-time {
   display: block;
   text-align: right;
+}
+.welcome--message {
+  text-align: center;
 }
 @media only screen and (max-width: 540px) {
   .platform--title {
