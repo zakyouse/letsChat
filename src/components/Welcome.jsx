@@ -1,7 +1,7 @@
 import logo from "../assets/ksclogo.png";
 import { auth } from "../firebase";
 import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
-
+import Footer from "./Footer";
 import React from "react";
 function Welcome(prop) {
   const googleSignIn = () => {
@@ -24,6 +24,7 @@ function Welcome(prop) {
           <i className="fa-brands fa-google"></i>
           Sign In With Google
         </button>
+        <Footer />
       </div>
     </>
   );
