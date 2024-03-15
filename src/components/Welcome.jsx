@@ -1,11 +1,17 @@
 import logo from "../assets/ksclogo.png";
 import { auth } from "../firebase";
 import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
-function Welcome() {
+
+import React from "react";
+function Welcome(prop) {
   const googleSignIn = () => {
     const provider = new GoogleAuthProvider();
     signInWithRedirect(auth, provider);
+    if (prop.userState === null) {
+      prop.setLoading(true);
+    }
   };
+
   return (
     <>
       <div className="welcome--page">

@@ -1,6 +1,7 @@
 import SendMessage from "./SendMessage";
 import Message from "./Message";
 import { useEffect, useRef, useState } from "react";
+
 import {
   query,
   collection,
@@ -30,6 +31,7 @@ function ChatBox() {
     });
     return () => unsubscribe;
   }, []);
+
   return (
     <main>
       {messages.length == 0 ? (
